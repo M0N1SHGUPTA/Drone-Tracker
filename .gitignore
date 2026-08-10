@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+env/
+venv/
+.venv/
+
+# Large files — share these separately
+test_video.mp4
+*.mp4
+
+# Model weights — ultralytics will auto-download on first run
+yolov8n.pt
+*.pt
+
+# Output folders created at runtime
+uploads/
+outputs/
+
+# OS junk
+.DS_Store
+Thumbs.db
