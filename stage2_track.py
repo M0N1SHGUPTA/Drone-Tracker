@@ -1,21 +1,4 @@
-"""
-STAGE 2: Lock onto ONE target and follow it across the video.
 
-How it works:
-1. Run detection on the FIRST frame only, to find all people/vehicles.
-2. Pick ONE of them as "the locked target" (auto-picks the largest box
-   for now = simulates picking the closest/nearest one).
-3. Initialize an OpenCV tracker on that target's box.
-4. For every frame after that, we DON'T run YOLO again. We just ask the
-   tracker "where did my target go?" -- this is much cheaper computationally,
-   which mirrors how a real onboard drone system would work (full detection
-   is expensive, tracking a known target is cheap).
-5. We calculate how far the target is from the center of the frame (the
-   "offset") -- this is the number a real gimbal/flight controller would
-   use to steer the camera to keep the target centered.
-
-Run: python stage2_track.py
-"""
 from ultralytics import YOLO
 import cv2
 
