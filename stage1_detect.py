@@ -1,8 +1,4 @@
-"""
-STAGE 1: Basic object detection on a video.
-Run: python stage1_detect.py
-This just proves detection works. Nothing fancy yet.
-"""
+
 from ultralytics import YOLO
 import cv2
 
