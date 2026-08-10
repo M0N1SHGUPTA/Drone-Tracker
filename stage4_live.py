@@ -1,21 +1,4 @@
-"""
-STAGE 4: Live feed version — same lock-and-track logic, but reading from
-a live camera instead of a video file.
 
-This proves the pipeline works on a continuous live stream, not just
-pre-recorded video. On an actual drone, you'd swap cv2.VideoCapture(0)
-for the drone's camera source (e.g. an RTSP URL like
-cv2.VideoCapture("rtsp://drone-ip:port/stream")) -- the rest of the
-pipeline is identical. That's the point: the processing logic doesn't
-care where frames come from.
-
-Controls:
-  - Press 'l' to LOCK onto the largest detected person in the current frame
-  - Press 'r' to RESET (unlock, go back to just detecting)
-  - Press 'q' to QUIT
-
-Run: python stage4_live.py
-"""
 import cv2
 from ultralytics import YOLO
 
